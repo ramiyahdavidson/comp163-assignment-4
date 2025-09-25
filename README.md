@@ -13,6 +13,12 @@ print(f"Study Hours: {study_hours}")
 print(f"Social Points: {social_points}")
 print(f"Stress Level: {stress_level}")
 
+ print(f"\n Choose your course load:")
+print(f"A) Light Work (12 credits)")
+print(f"B) Normal (15 credits)")
+print(f"C) Pushing it  (18 credits)")
+choice = input("Your choice:")
+
 if choice == "A":
     if current_gpa >= 3.5:
         study_hours = study_hours - 3
