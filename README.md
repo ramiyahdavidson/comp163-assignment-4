@@ -12,3 +12,27 @@ print(f"Current Gpa: {current_gpa}")
 print(f"Study Hours: {study_hours}")
 print(f"Social Points: {social_points}")
 print(f"Stress Level: {stress_level}")
+
+if choice == "A":
+    if current_gpa >= 3.5:
+        study_hours = study_hours - 3
+        stress_level = stress_level - 5
+    else:
+        study_hours = study_hours - 1
+        stress_level = stress_level - 2
+elif choice == "B":
+    if current_gpa >= 3.0:
+        study_hours = study_hours + 2
+        stress_level = stress_level + 5
+    else:
+        study_hours = study_hours + 4
+        stress_level = stress_level + 9 
+elif choice == "C":
+    if current_gpa >= 3.5:
+        study_hours = study_hours + 5
+        stress_level = stress_level + 11
+    else: 
+        study_hours = study_hours + 10
+        stress_level = stress_level + 20
+else:
+    ("Invalid Course Load")
