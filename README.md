@@ -73,3 +73,74 @@ elif current_gpa < 3.0:
     social_points -=5
     stress_level += 7
     print("You worked extra hard to get your grades up, but at the cost of socializing and more stress.")
+if subject_choice not in study_options:
+    print("Pick a study choice that is listed.")
+    print(f" ----- Stats after Decision 2: ----- ")
+    print(f" Current GPA: {current_gpa:.2f}")
+    print(f" Student Hours: {study_hours}")
+    print(f" Social Points: {social_points}")
+    print(f" Stress Level: {stress_level}")
+    print(f"------------------------------------")
+    if choice == "A":
+        if study_hours >= 20 and stress_level >= 40:
+            study_hours += 5
+            stress_level += 10
+            social_points -= 10
+            print("You did not expect such a workload, and the stress is getting to you.")
+        elif study_hours < 15 or stress_level < 20:
+            study_hours -= 5
+            stress_level -= 10
+            social_points += 10
+            print("You are glad you took this path, you have more time to socialize and make time for yourself.")
+    if choice == "B":
+        if study_hours >= 20 and stress_level >= 40:
+                study_hours += 3
+                stress_level += 5
+                social_points -= 5
+                print("You somewhat expecting this workload, but it still drags you down a bit.")
+        elif study_hours < 15 or stress_level < 20:
+            study_hours -= 2
+            stress_level -= 8
+            social_points += 15
+            print("Your workload was a little less rigirous than you expected, and you have some more time than usual for yourself.")
+    if choice == "C":
+        if study_hours >= 20 and stress_level >= 40:
+            study_hours += 2
+            stress_level += 3
+            social_points -= 4
+            print("You completely expected this heavy workload, so you arentaffecting at all by your busy schedule.")
+    elif study_hours < 15 or stress_level < 20:
+        stress_level -= 25
+        social_points += 30
+        print("You worked extremely hard to overcome your busy workload,and you deserve time for yourself, family and friends more than anyone else.")
+print(f" ----- Stats after Decision 2: ----- ")
+print(f" Current GPA: {current_gpa:.2f}")
+print(f" Student Hours: {study_hours}")
+print(f" Social Points: {social_points}")
+print(f" Stress Level: {stress_level}")
+print(f"------------------------------------")
+opportunity_type = ["Research", "Sports"]
+research_opportunity = "Research"
+sports_oppurtunity = "Sports"
+if opportunity_type is research_opportunity:
+    print("You got a research opportunity! This could boost your GPA.")
+    current_gpa += 0.5
+else:
+    print("No research opportunities came your way this semester.")
+if opportunity_type is not research_opportunity:
+    print("You missed the research opportunity and focused elsewhere.")
+    social_points += 5
+if opportunity_type is sports_oppurtunity:
+    print("You got a sports opportunity! This could boost your social life.")
+    social_points += 15
+else:
+    print("No sports opportunities came your way this semester.")
+if opportunity_type is not research_opportunity:
+    print("You missed the sports opportunity and focused elsewhere.")
+current_gpa += 0.25
+print(f"\n ----- Stats after Decision 3 ----- ")
+print(f" Current GPA: {current_gpa:.2f}")
+print(f" Student Hours: {study_hours}")
+print(f" Social Points: {social_points}")
+print(f" Stress Level: {stress_level}")
+print(f"------------------------------------")
